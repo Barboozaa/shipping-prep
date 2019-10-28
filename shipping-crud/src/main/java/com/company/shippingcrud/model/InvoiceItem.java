@@ -71,12 +71,12 @@ public class InvoiceItem {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         InvoiceItem that = (InvoiceItem) o;
-        return invoiceItemId.equals(that.invoiceItemId) &&
-                invoiceId.equals(that.invoiceId) &&
-                itemName.equals(that.itemName) &&
-                itemDescription.equals(that.itemDescription) &&
-                weight.equals(that.weight) &&
-                shipCost.equals(that.shipCost);
+        return Objects.equals(invoiceItemId, that.invoiceItemId) &&
+                Objects.equals(invoiceId, that.invoiceId) &&
+                Objects.equals(itemName, that.itemName) &&
+                Objects.equals(itemDescription, that.itemDescription) &&
+                Objects.equals(weight, that.weight) &&
+                Objects.equals(shipCost, that.shipCost);
     }
 
     @Override
